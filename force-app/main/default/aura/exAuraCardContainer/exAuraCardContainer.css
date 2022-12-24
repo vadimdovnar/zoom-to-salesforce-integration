@@ -1,0 +1,35 @@
+@media (min-width: 1281px) {
+	.THIS .text-size {
+		font-size: 0.6rem;
+	}
+	.THIS .slds-card__header {
+		font-size: 0.5rem;
+	}
+	.THIS .slds-text-heading_small {
+		font-size: var(--slds-c-card-heading-font-size, 0.6rem) !important;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+	.THIS .text-size {
+		font-size: 0.4rem;
+	}
+	.THIS .slds-text-heading_small {
+		font-size: var(--slds-c-card-heading-font-size, 0.5rem) !important;
+	}
+	.THIS .slds-card__header {
+		font-size: 0.4rem;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.THIS .slds-text-heading_small {
+		font-size: var(--slds-c-card-heading-font-size, 0.7rem) !important;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	.THIS .text-size {
+		font-size: 0.7rem;
+	}
+}

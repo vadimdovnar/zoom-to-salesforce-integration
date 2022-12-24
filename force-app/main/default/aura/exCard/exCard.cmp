@@ -1,0 +1,110 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+	
+	<aura:attribute name="isModalHidden" type="Boolean" default="true" description="Flag to control modal window"/>
+	<aura:attribute name="truthy" type="boolean" default="true" description="Flag to card view"/>
+
+	<!-- Modal Window -->
+	<c:exModalWindow isHidden="{!v.isModalHidden}" cancelLabel="Cancel" onSaveClick="{! c.onConfirm }" onCancelClick="{! c.onCancel }">
+		<div class="slds-grid slds-wrap">
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">Test income</div>
+				<div class="text-size slds-text-color_weak">
+					Amount before tax and other deduction
+				</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div>$32200.00</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">Test income</div>
+				<div class="text-size slds-text-color_weak">
+					Amount deposited into account after tax deduction
+				</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div>$3500.00</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">Jerry</div>
+				<div class="text-size slds-text-color_weak">First Name</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">France</div>
+				<div class="text-size slds-text-color_weak">Country</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">Smith</div>
+				<div class="text-size slds-text-color_weak">Last Name</div>
+			</div>
+			<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+				<div class="slds-text-font_monospace">Paris</div>
+				<div class="text-size slds-text-color_weak">City/Town</div>
+			</div>
+		</div>
+	</c:exModalWindow>
+
+	<lightning:card title="Monthly Income">
+		<!-- Button group -->
+		<aura:set attribute="actions">
+			<lightning:buttonGroup>
+				<lightning:button class="btn-border-red" label="Edit" variant="destructive-text" onclick="{! c.openModal }"/>
+				<lightning:button class="btn-border-green" label="View" variant="destructive-text" onclick="{! c.changeView }"/>
+			</lightning:buttonGroup>
+		</aura:set>
+		<!-- Initial state -->
+		<aura:if isTrue="{!v.truthy}">
+			<div class="slds-grid slds-wrap text-size">
+				<div class="slds-col slds-size_2-of-3 slds-var-p-around_small">
+					<div class="slds-text-font_monospace">Test income</div>
+					<div class="text-size slds-text-color_weak">
+						Amount before tax and other deduction
+					</div>
+				</div>
+				<div class="slds-col slds-size_1-of-3 slds-var-p-around_small">
+					<div>$32200.00</div>
+				</div>
+				<div class="slds-col slds-size_2-of-3 slds-var-p-around_small">
+					<div class="slds-text-font_monospace">Test income</div>
+					<div class="text-size slds-text-color_weak">
+						Amount deposited into account after tax deduction
+					</div>
+				</div>
+				<div class="slds-col slds-size_1-of-3 slds-var-p-around_small">
+					<div>$3500.00</div>
+				</div>
+			</div>
+			<!-- Second state -->
+			<aura:set attribute="else">
+				<div class="slds-grid slds-wrap text-size">
+					<div
+						class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+						<div class="slds-text-font_monospace">Jerry</div>
+						<div class="text-size slds-text-color_weak">
+							First Name
+						</div>
+					</div>
+					<div
+						class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+						<div class="slds-text-font_monospace">France</div>
+						<div class="text-size slds-text-color_weak">
+							Country
+						</div>
+					</div>
+					<div
+						class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+						<div class="slds-text-font_monospace">Smith</div>
+						<div class="text-size slds-text-color_weak">
+							Last Name
+						</div>
+					</div>
+					<div class="slds-col slds-size_2-of-4 slds-var-p-around_small">
+						<div class="slds-text-font_monospace">Paris</div>
+						<div class="text-size slds-text-color_weak">
+							City/Town
+						</div>
+					</div>
+				</div>
+			</aura:set>
+		</aura:if>
+	</lightning:card>
+</aura:component>

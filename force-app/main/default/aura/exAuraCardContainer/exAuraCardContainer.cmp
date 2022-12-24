@@ -1,0 +1,16 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <div class="slds-grid slds-wrap">
+        <div class="slds-col slds-large-size_2-of-4 slds-medium-size_1-of-1 slds-small-size_2-of-4">
+            <c:exCard></c:exCard>
+        </div>
+        <div class="slds-col slds-large-size_2-of-4 slds-medium-size_1-of-1 slds-small-size_2-of-4 slds-var-p-left_xxx-small">
+            <c:exCard></c:exCard>
+        </div>
+        <div class="slds-col slds-large-size_2-of-4 slds-medium-size_1-of-1 slds-small-size_2-of-4">
+            <c:exCard></c:exCard>
+        </div>
+        <div class="slds-col slds-large-size_2-of-4 slds-medium-size_1-of-1 slds-small-size_2-of-4 slds-var-p-left_xxx-small">
+            <c:exCard></c:exCard>
+        </div>
+    </div>
+</aura:component>

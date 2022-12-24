@@ -1,0 +1,68 @@
+<!-- sldsValidatorIgnore -->
+<template>
+	<div class={cardColor}>
+		<article class="slds-card slds-col">
+			<div class="slds-grid slds-grid_align-spread">
+				<div class="slds-col slds-var-p-horizontal_x-small">
+					<div class="slds-text-color_weak slds-text-font_monospace">{status}</div>
+					<div class="slds-text-font_monospace slds-text-title_bold">{accounts.status}</div>
+				</div>
+				<div class="slds-col slds-var-p-horizontal_x-small">
+					<div class="slds-text-align_right slds-text-color_weak slds-text-font_monospace">{start}</div>
+					<div class="slds-text-font_monospace slds-text-title_bold">{accounts.start}</div>
+				</div>
+			</div>
+			<div class="slds-p-around_medium">
+				<div class="slds-p-horizontal_small slds-text-title_bold slds-align_absolute-center slds-text-link">
+					{accounts.name}
+				</div>
+				<div class="slds-align_absolute-center slds-text-title_bold"> 
+					{accounts.nmbr}
+				</div>
+			</div>
+			<div class="slds-grid slds-grid_align-spread">
+				<div class="slds-col slds-p-around_x-small">
+					<div class="slds-text-color_weak slds-text-font_monospace">{department}</div>
+					<div class="slds-text-font_monospace slds-text-title_bold">{accounts.department}</div>
+				</div>
+				<div class="slds-align_absolute-center slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+					<lightning-button-icon icon-name="utility:down" 
+						onclick={handleClick}
+						size="large" 
+						variant="bare"
+						alternative-text="View More" 
+						class="slds-m-left_xx-small">
+					</lightning-button-icon>
+					<template if:true={isMenu}>
+						<div class="slds-dropdown slds-dropdown_actions slds-dropdown_right">
+							<ul class="slds-dropdown__list" role="menu">
+								<li class="slds-dropdown__item" role="presentation">
+									<a href="#" role="menuitem" tabindex="0">
+									  <span class="slds-truncate" title="Edit">Edit</span>
+									</a>
+							  	</li>
+							  	<li class="slds-dropdown__item" role="presentation">
+									<a href="#" role="menuitem" tabindex="-1">
+								  		<span class="slds-truncate" title="Delete">Delete</span>
+									</a>
+							  	</li>
+							</ul>
+						</div>
+					</template>
+				</div>
+				<div class="slds-col slds-p-around_x-small">
+					<div class="slds-text-color_weak slds-text-font_monospace">
+						{leadAuditor}
+					</div>
+					<div class="slds-clearfix">
+						<lightning-icon class="icon-border slds-float_right" 
+							icon-name="utility:user" 
+							alternative-text="User" 
+							title="User">
+						</lightning-icon>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+</template>

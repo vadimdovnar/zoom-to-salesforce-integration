@@ -1,0 +1,23 @@
+:host{
+}
+.icon-border{
+    border: 4px solid gray;
+    border-radius: 50%;
+}
+
+.border-color-green{
+    padding-top: 3px;
+    padding-bottom: 10px;
+    border-top: 4px solid green;
+}
+
+.border-color-red{
+    padding-top: 3px;
+    padding-bottom: 10px;
+    border-top: 4px solid red;
+}
+.border-color-yellow{
+    padding-top: 3px;
+    padding-bottom: 10px;
+    border-top: 4px solid yellow;
+}
